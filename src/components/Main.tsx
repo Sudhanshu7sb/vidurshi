@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   Mail,
   Phone,
@@ -7,11 +6,9 @@ import {
   BookOpen,
   Users,
   Award,
-  ChevronRight,
   MessageSquare,
   Calendar,
   Globe,
-  GraduationCap,
   CheckCircle,
   Menu,
 } from "lucide-react";
@@ -27,14 +24,14 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "./ui/carousel";
-import Autoplay from "embla-carousel-autoplay"
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselNext,
+//   CarouselPrevious,
+// } from "./ui/carousel";
+// import Autoplay from "embla-carousel-autoplay"
 
 const EnglishTutorPortfolio = () => {
   const tutorData = {
@@ -142,7 +139,7 @@ const EnglishTutorPortfolio = () => {
     ],
   };
 
-  const StarRating = ({ rating }) => (
+  const StarRating = ({ rating }: { rating: number }) => (
     <div className="flex space-x-1">
       {[...Array(5)].map((_, i) => (
         <Star
@@ -533,7 +530,7 @@ const EnglishTutorPortfolio = () => {
                       <Globe className="w-5 h-5 text-violet-400" />
                     </div>
                     <span className="text-zinc-300">
-                      {tutorData.contact.website}
+                      
                     </span>
                   </div>
                 </div>
